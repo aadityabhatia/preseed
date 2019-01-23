@@ -1,0 +1,43 @@
+{
+  "name": "preseed",
+  "version": "1.0.0",
+  "description": "Ubuntu/Debian preconfiguration file generator for automated OS installation",
+  "main": "app.js",
+  "os" : [ "!win32" ],
+  "dependencies": {
+    "commander": "^2.19",
+    "express": "^4.16",
+    "lodash": "^4.17",
+    "morgan": "^1.9"
+  },
+  "bin": {
+    "preseed": "app.js"
+  },
+  "scripts": {
+    "prepublishOnly": "coffee -c .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityabhatia/preseed.git"
+  },
+  "keywords": [
+    "preseed",
+    "preconfiguration",
+    "linux",
+    "ubuntu",
+    "debian",
+    "kali",
+    "install",
+    "setup",
+    "unattended",
+    "automatic",
+    "apt-proxy"
+  ],
+  "author": "Aaditya Bhatia <aadityabhatia@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aadityabhatia/preseed/issues"
+  },
+  "homepage": "https://github.com/aadityabhatia/preseed#readme"
+}
