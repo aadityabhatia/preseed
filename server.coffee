@@ -11,6 +11,7 @@ pkg = require './package.json'
 
 commander
 	.description pkg.description
+	.option '-p, --port <number>', "HTTP server port", 18000
 	.option '-t, --template <filename>', "preseed template", path.join(__dirname, 'template-example.cfg')
 	.option '-c, --config <filename.json>', "configuration file", path.join(__dirname, 'config-example.json')
 	.option '-H, --hostnames <filename.json>', "list of hostnames"
@@ -68,7 +69,7 @@ app.get '/favicon.ico', (req, res) -> res.sendStatus 404
 app.get '/:hostname', (req, res) ->
 	res.type('txt').send generateConfig req.params.hostname
 
-server = app.listen process.env.PORT or config.PORT, ->
+server = app.listen parseInt(commander.port) or 0, ->
 	serverInfo = server.address()
 	if serverInfo.family is 'IPv6' then serverInfo.address = "[#{serverInfo.address}]"
 	console.log "[#{process.pid}] http://#{serverInfo.address}:#{serverInfo.port}/"

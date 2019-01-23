@@ -1,5 +1,4 @@
 {
-	"PORT": 18000,
 	"TIMEZONE": "US/Eastern",
 	"SERVER_NTP": "time.nist.gov",
 	"FULLNAME": "User",

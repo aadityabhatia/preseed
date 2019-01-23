@@ -9,11 +9,12 @@ npm install --global preseed
 
 ## Usage
 ```
-preseed [-t template.cfg] [-c config.json] [-H hostnames.json] [-n]
+preseed [-p 18000] [-t template.cfg] [-c config.json] [-H hostnames.json] [-n]
 ```
 
 ## Options
 ```
+  -p, --port <number>              HTTP server port
   -t, --template <filename>        preseed template
   -c, --config <filename.json>     configuration file
   -H, --hostnames <filename.json>  list of hostnames
@@ -24,7 +25,6 @@ preseed [-t template.cfg] [-c config.json] [-H hostnames.json] [-n]
 
 ## Configuration File
 
-- `PORT`: HTTP port to serve the preseed configuration
 - `TIMEZONE`: See `/usr/share/zoneinfo/` for valid values.
 - `PACKAGE_DESKTOP_ENV`: Package containing the desktop environment
 - `PACKAGES_ADDITIONAL`: List of additional packages to be installed; can be an array, a space-separated string, or an array of space-separated strings
