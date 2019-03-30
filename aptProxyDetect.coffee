@@ -9,7 +9,9 @@ module.exports =
 			if code or signal
 				reject "Child process exited with non-zero status. code: #{code}, signal: #{signal}"
 				return
-			lines = @stdout.read().toString().split('\n').filter (str) => str.startsWith '='
+			stdoutBuffer = @stdout.read()
+			if not stdoutBuffer then return reject "apt-proxy not found"
+			lines = stdoutBuffer.toString().split('\n').filter (str) => str.startsWith '='
 			for line in lines
 				tokens = line.split ';'
 				addr = tokens[7]
