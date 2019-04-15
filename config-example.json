@@ -13,6 +13,7 @@
 	"SCRIPTS": [
 		"apt-install-chrome.bash",
 		"chrome-policies.bash",
+		["firefox-homepage.bash", "https://news.ycombinator.com"],
 		"dconf-settings.bash",
 		"gdm-autologin.bash"
 	],
