@@ -9,9 +9,17 @@
 	"TASK_SELECTION": "ubuntu-gnome-desktop",
 	"PACKAGE_DESKTOP_ENV": "vanilla-gnome-desktop",
 	"PACKAGES_ADDITIONAL": "openssh-server",
+	"URL_SCRIPTS": "http://10.0.0.1:8000/scripts",
+	"SCRIPTS": [
+		"apt-install-chrome.bash",
+		"chrome-policies.bash",
+		"dconf-settings.bash",
+		"gdm-autologin.bash"
+	],
 	"URL_RESOURCES": "http://10.0.0.1:8000",
-	"SCRIPT_BOOTSTRAP": "bootstrap.sh",
 	"RESOURCES": [
+		"README.md",
+		"atom.deb",
 		"userconfig.sh"
 	]
 }

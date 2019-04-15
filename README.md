@@ -28,9 +28,9 @@ preseed [-p 18000] [-t template.cfg] [-c config.json] [-H hostnames.json] [-n]
 - `TIMEZONE`: See `/usr/share/zoneinfo/` for valid values.
 - `PACKAGE_DESKTOP_ENV`: Package containing the desktop environment
 - `PACKAGES_ADDITIONAL`: List of additional packages to be installed; can be an array, a space-separated string, or an array of space-separated strings
-- `URL_RESOURCES`: Location of `SCRIPT_BOOTSTRAP` and `RESOURCES`; can be HTTP, HTTPS, or FTP
-- `SCRIPT_BOOTSTRAP`: Script executed during installation using `preseed/late_command` directive
-- `RESOURCES`: Files downloaded to the default user's home directory (e.g. `/home/user`); these are not executed during or after the installation.
+- `URL_SCRIPTS`, `URL_RESOURCES`: Locations of `SCRIPTS` and `RESOURCES`; can be HTTP, HTTPS, or FTP
+- `SCRIPTS`: `bash` scripts executed during installation using `preseed/late_command` directive
+- `RESOURCES`: Static files downloaded to the primary user's home directory (e.g. `/home/user`); these are not executed at any time.
 
 ## Note
 
