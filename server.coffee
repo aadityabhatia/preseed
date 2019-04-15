@@ -12,7 +12,7 @@ pkg = require './package.json'
 commander
 	.description pkg.description
 	.option '-p, --port <number>', "HTTP server port", 18000
-	.option '-t, --template <filename>', "preseed template", path.join(__dirname, 'template-example.cfg')
+	.option '-t, --template <filename>', "preseed template", path.join(__dirname, 'template.cfg')
 	.option '-c, --config <filename.json>', "configuration file", path.join(__dirname, 'config-example.json')
 	.option '-H, --hostnames <filename.json>', "list of hostnames"
 	.option '-n, --no-apt-proxy-detect', "do NOT automatically detect apt-proxy on local network"
